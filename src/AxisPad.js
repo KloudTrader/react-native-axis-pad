@@ -93,7 +93,7 @@ export default class AxisPad extends Component {
     }
 
     centerPosition(pageX, pageY) {
-        this.handlerElement._component.measure((fx, fy, width, height, px, py) => {
+        this.handlerElement.measure((fx, fy, width, height, px, py) => {
             cx = pageX - px - width / 2
             cy = pageY - py - height / 2
             this.setState({
@@ -105,7 +105,7 @@ export default class AxisPad extends Component {
 
     setPosition(pageX, pageY, after) {
         let { dx, dy } = this.state;
-        this.wrapperElement._component.measure((fx, fy, width, height, px, py) => {
+        this.wrapperElement.measure((fx, fy, width, height, px, py) => {
             const cx = px + width / 2;
             const cy = py + height / 2;
             this.setState({
