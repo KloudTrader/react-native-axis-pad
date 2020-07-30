@@ -43,7 +43,8 @@ export default class AxisPad extends Component {
             {
                 toValue: this.state.cx,
                 duration: 300,
-                easing: Easing.elastic()
+                easing: Easing.elastic(),
+                useNativeDriver: true
             }
         ).start();
         Animated.timing(
@@ -51,7 +52,8 @@ export default class AxisPad extends Component {
             {
                 toValue: this.state.cy,
                 duration: 300,
-                easing: Easing.elastic()
+                easing: Easing.elastic(),
+                useNativeDriver: true
             }
         ).start();
     }
@@ -62,7 +64,8 @@ export default class AxisPad extends Component {
             {
                 toValue: this.state.px,
                 duration: 50,
-                easing: Easing.out(Easing.exp)
+                easing: Easing.out(Easing.exp),
+                useNativeDriver: true
             }
         ).start();
         Animated.timing(
@@ -70,7 +73,8 @@ export default class AxisPad extends Component {
             {
                 toValue: this.state.py,
                 duration: 50,
-                easing: Easing.out(Easing.exp)
+                easing: Easing.out(Easing.exp),
+                useNativeDriver: true
             }
         ).start()
     }
